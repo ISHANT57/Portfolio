@@ -1,0 +1,15 @@
+services:
+  - type: web
+    name: ishant-portfolio
+    env: static
+    buildCommand: pnpm install && pnpm --filter @workspace/portfolio run build
+    staticPublishPath: artifacts/portfolio/dist/public
+    envVars:
+      - key: BASE_PATH
+        value: /
+      - key: NODE_ENV
+        value: production
+    routes:
+      - type: rewrite
+        source: /*
+        destination: /index.html

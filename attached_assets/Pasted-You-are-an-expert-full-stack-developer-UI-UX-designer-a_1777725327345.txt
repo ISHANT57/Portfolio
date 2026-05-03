@@ -1,0 +1,133 @@
+You are an expert full-stack developer, UI/UX designer, and portfolio strategist.
+
+Your task is to build a high-end, modern, animated developer portfolio website inspired by jithin.dev and the structure of the Codeo GitHub repository.
+
+The portfolio must NOT look like a basic template. It should look premium, unique, and recruiter-attractive.
+
+========================
+🎯 CORE OBJECTIVE
+=================
+
+Create a personal portfolio website based strictly on the resume data I provide, with strong emphasis on:
+
+* Projects (primary focus)
+* Skills (secondary)
+* Achievements (proof of ability)
+
+========================
+🧱 TECH STACK (STRICT)
+======================
+
+* React (with Vite)
+* Tailwind CSS
+* Framer Motion (for animations)
+* Optional: GSAP for advanced animations
+* Use modular, reusable components
+* Clean folder structure
+
+========================
+🎨 DESIGN REQUIREMENTS
+======================
+
+* Dark theme (default)
+* Glassmorphism / gradient UI
+* Smooth animations (fade, slide, hover effects)
+* Modern typography
+* Minimal but visually powerful
+* Fully responsive (mobile-first)
+* Fast loading
+
+========================
+📌 SECTIONS (MANDATORY)
+=======================
+
+1. HERO SECTION
+
+* Name + Role (dynamic typing effect)
+* Short tagline
+* Resume download button
+* Social links (GitHub, LinkedIn, LeetCode)
+* Background animation (particles / gradient / glow)
+
+2. ABOUT SECTION
+
+* Professional summary from resume
+* Highlight strengths
+* Clean layout with visual elements
+
+3. SKILLS SECTION
+
+* Categorize:
+  • Languages
+  • Frontend
+  • Backend
+  • Tools
+* Display using icons + badges or animated bars
+
+4. PROJECTS SECTION (MOST IMPORTANT)
+
+* Show projects as interactive cards
+* Each card must include:
+  • Title
+  • Description
+  • Tech stack
+  • GitHub link
+  • Live demo (if available)
+* Add hover animations + tilt or glow effects
+* Highlight 2–3 major projects prominently
+
+5. EXPERIENCE / INTERNSHIPS
+
+* Role, company, duration
+* Bullet points of work
+
+6. ACHIEVEMENTS / CODING
+
+* DSA stats (LeetCode etc.)
+* Contest participation
+* Certifications
+
+7. CONTACT SECTION
+
+* Email
+* Social links
+* Contact form (optional)
+
+8. FOOTER
+
+* Clean minimal footer
+
+========================
+⚡ ADVANCED FEATURES
+===================
+
+* Smooth scrolling navigation
+* Scroll progress bar
+* Dark/light mode toggle
+* Page transitions
+* Lazy loading
+* SEO meta tags
+* Animated section entry
+
+========================
+📂 OUTPUT REQUIREMENTS
+======================
+
+* Provide complete folder structure
+* Provide all code files
+* Clean, production-ready code
+* Include setup instructions (step-by-step)
+
+========================
+🚫 RESTRICTIONS
+===============
+
+* Do NOT generate generic template UI
+* Do NOT skip animations
+* Do NOT keep design basic
+
+========================
+📥 INPUT DATA
+=============
+
+(Insert my resume data here and strictly follow it)
