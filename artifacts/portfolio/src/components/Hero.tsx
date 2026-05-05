@@ -126,7 +126,7 @@ export function Hero() {
               >
                 View My Work <ArrowRight className="w-4 h-4" />
               </Button>
-              <a
+              {/* <a
                 href="https://docs.google.com/document/d/1UC69ZunmXNMoESPhePTrICZBVe1KmtS4qBLIIpZbuiE/export?format=pdf"
                 target="_blank"
                 rel="noreferrer"
@@ -141,7 +141,30 @@ export function Hero() {
                 >
                   <Download className="w-4 h-4" /> Download Resume
                 </Button>
-              </a>
+              </a> */}
+              <a
+  href="https://drive.google.com/uc?export=download&id=1OeppecoYMGZJqJGB0ByMHyIjXhSnUK9G"
+  target="_blank"
+  rel="noreferrer"
+  onClick={(e) => {
+    e.preventDefault();
+    goExternal("https://drive.google.com/uc?export=download&id=1OeppecoYMGZJqJGB0ByMHyIjXhSnUK9G");
+  }}
+  data-testid="btn-download-resume"
+>
+  <Button
+    variant="outline"
+    size="lg"
+    className="font-semibold px-6 gap-2 transition-all duration-300"
+    style={{
+      background: "var(--s2)",
+      borderColor: "var(--b1)",
+      color: "var(--t2)"
+    }}
+  >
+    <Download className="w-4 h-4" /> Download Resume
+  </Button>
+</a>
             </div>
 
             {/* Social links */}
