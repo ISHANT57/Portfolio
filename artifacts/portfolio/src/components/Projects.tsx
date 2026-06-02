@@ -21,7 +21,7 @@ const projects: Project[] = [
     description: "AI Q&A system handling multiple concurrent queries using semantic search and RAG. Engineered a high-dimensional search pipeline with Mistral embeddings and Qdrant vector database for high relevance.",
     tech: ["Python", "RAG Pipeline", "Mistral", "Qdrant", "Flask", "NLP", "Pandas", "NumPy"],
     github: "https://github.com/ISHANT57/Gitabot_NYD_2026",
-    demo: "https://gitabot-nyd-2026--ishantbhoyar59.replit.app/",
+    demo: "https://gitabot-hl2n.onrender.com/",
     accentColor: "#8b5cf6",
     screenshotUrl: "/screenshots/dharmabot.png",
   },
