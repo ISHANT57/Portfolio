@@ -3,14 +3,10 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Mail, Phone, MapPin, Send, User, MessageSquare, Check, Github, Loader2 } from "lucide-react";
 import { SiInstagram, SiLeetcode } from "react-icons/si";
 import { Linkedin as LinkedinIcon } from "lucide-react";
-import emailjs from "@emailjs/browser";
 import { goExternal } from "@/lib/utils";
 import { useToast } from "@/hooks/use-toast";
 
-const EMAILJS_SERVICE_ID  = import.meta.env.VITE_EMAILJS_SERVICE_ID  as string;
-const EMAILJS_TEMPLATE_ID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID as string;
-const EMAILJS_PUBLIC_KEY  = import.meta.env.VITE_EMAILJS_PUBLIC_KEY  as string;
-const EMAILJS_CONFIGURED  = !!(EMAILJS_SERVICE_ID && EMAILJS_TEMPLATE_ID && EMAILJS_PUBLIC_KEY);
+const API_BASE_URL = import.meta.env.VITE_API_URL ?? "http://localhost:5000";
 
 const directContacts = [
   {
@@ -63,35 +59,45 @@ export function Contact() {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (!form.name || !form.email || !form.message) return;
 
-    if (!EMAILJS_CONFIGURED) {
-      // Fallback: open mailto if EmailJS not configured yet
-      const subject = encodeURIComponent(`Portfolio Contact from ${form.name}`);
-      const body = encodeURIComponent(`From: ${form.name}\nEmail: ${form.email}\n\n${form.message}`);
-      window.open(`mailto:ishantbhoyar59@gmail.com?subject=${subject}&body=${body}`);
-      setSubmitted(true);
+    if (!form.name || !form.email || !form.message)
       return;
-    }
 
     setSending(true);
+
     try {
-      await emailjs.send(
-        EMAILJS_SERVICE_ID,
-        EMAILJS_TEMPLATE_ID,
+      const response = await fetch(
+        `${API_BASE_URL}/api/contact`,
         {
-          from_name:    form.name,
-          from_email:   form.email,
-          message:      form.message,
-          to_name:      "Ishant",
-          reply_to:     form.email,
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(form),
         },
-        EMAILJS_PUBLIC_KEY
       );
-      setSubmitted(true);
-      toast({ title: "Message sent!", description: "I'll get back to you within 24 hours." });
-    } catch {
-      toast({ title: "Failed to send", description: "Please email me directly at ishantbhoyar59@gmail.com", variant: "destructive" });
+
+      const data = await response.json();
+
+      if (data.success) {
+        setSubmitted(true);
+        toast({
+          title: "Success",
+          description: "Message sent successfully",
+        });
+      } else {
+        toast({
+          title: "Failed",
+          description: data.message,
+          variant: "destructive",
+        });
+      }
+    } catch (error) {
+      toast({
+        title: "Error",
+        description: "Server connection failed",
+        variant: "destructive",
+      });
     } finally {
       setSending(false);
     }
