@@ -195,10 +195,9 @@ export function Hero() {
             </div>
 
             {/* Stats */}
-            <div className="grid grid-cols-4 gap-6 mt-6 pt-6 w-full border-t" style={{ borderColor: "var(--b4)" }}>
+            <div className="grid grid-cols-3 gap-6 mt-6 pt-6 w-full border-t" style={{ borderColor: "var(--b4)" }}>
               {[
                 { label: "PROJECTS", counter: <AnimatedCounter to={4} /> },
-                { label: "YEARS EXP.", counter: <AnimatedCounter to={2} suffix="+" /> },
                 { label: "GPA", counter: <AnimatedCounter to={7.94} decimals={2} /> },
                 { label: "SCHOLARSHIP", counter: <AnimatedCounter to={100} suffix="%" /> },
               ].map((stat, i) => (
