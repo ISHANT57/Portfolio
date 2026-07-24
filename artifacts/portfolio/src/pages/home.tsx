@@ -1,6 +1,7 @@
 import { ScrollProgress } from "@/components/ScrollProgress";
 import { Navbar } from "@/components/Navbar";
 import { Hero } from "@/components/Hero";
+import { AIChatPreview } from "@/components/AIChatPreview";
 import { About } from "@/components/About";
 import { Skills } from "@/components/Skills";
 import { FeaturedProject } from "@/components/FeaturedProject";
@@ -18,6 +19,7 @@ export default function Home() {
 
       <main>
         <Hero />
+        <AIChatPreview />
         <About />
         <Skills />
         <FeaturedProject />

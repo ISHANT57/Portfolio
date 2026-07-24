@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { Sun, Moon, Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 import { motion, AnimatePresence } from "framer-motion";
 
 export function Navbar() {
@@ -72,15 +73,18 @@ export function Navbar() {
           onClick={(e) => { e.preventDefault(); scrollTo("home"); }}
           data-testid="link-home-logo"
         >
-          <div
-            className="w-10 h-10 rounded-lg flex items-center justify-center text-white font-bold text-lg transition-all duration-300 group-hover:scale-105"
-            style={{
-              background: "linear-gradient(135deg, #6366f1, #8b5cf6)",
-              boxShadow: "0 0 20px rgba(99,102,241,0.4)"
-            }}
+          <Avatar
+            className="w-10 h-10 transition-all duration-300 group-hover:scale-105"
+            style={{ boxShadow: "0 0 0 2px rgba(99,102,241,0.5), 0 0 20px rgba(99,102,241,0.4)" }}
           >
-            IB
-          </div>
+            <AvatarImage src="/profile.jpeg" alt="Ishant Bhoyar" className="object-cover object-[center_15%]" />
+            <AvatarFallback
+              className="text-white font-bold text-lg"
+              style={{ background: "linear-gradient(135deg, #6366f1, #8b5cf6)" }}
+            >
+              IB
+            </AvatarFallback>
+          </Avatar>
         </a>
 
         {/* Desktop Nav */}
