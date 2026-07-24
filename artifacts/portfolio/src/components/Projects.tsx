@@ -113,7 +113,7 @@ const projects: Project[] = [
     github: "https://github.com/ISHANT57/CareNexus",
     demo: "https://carenexusweb-q5ijcqplh-ishant57s-projects.vercel.app/",
     accentColor: "#8b5cf6",
-    screenshotUrl: "https://image.thum.io/get/width/800/height/500/crop/200/noanimate/https://carenexusweb-q5ijcqplh-ishant57s-projects.vercel.app/",
+    screenshotUrl: "/screenshots/carenexus.png",
   },
 ];
 
