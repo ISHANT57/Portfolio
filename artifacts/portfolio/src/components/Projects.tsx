@@ -75,6 +75,36 @@ const projects: Project[] = [
     accentColor: "#f97316",
     screenshotUrl: "/screenshots/git-tracker.png",
   },
+  {
+    id: "08",
+    title: "CampusAgent",
+    description: "Intelligent Q&A agent for campus information retrieval using RAG and semantic search. Answers student queries about admissions, academics, campus life, and more with cited sources.",
+    tech: ["Python", "RAG", "LLM", "Semantic Search", "Flask", "Vector DB"],
+    github: "https://github.com/ISHANT57/CampusAgent",
+    demo: null,
+    accentColor: "#06b6d4",
+    screenshotUrl: null,
+  },
+  {
+    id: "09",
+    title: "CampusBrain",
+    description: "Educational RAG platform providing instant answers to questions about college campuses, scholarships, and academic programs. Grounded in university documents with source citations.",
+    tech: ["React", "Node.js", "RAG Pipeline", "LLM", "Tailwind CSS", "NLP"],
+    github: "https://github.com/ISHANT57/CampusBrain",
+    demo: null,
+    accentColor: "#6366f1",
+    screenshotUrl: null,
+  },
+  {
+    id: "10",
+    title: "Goqii Transcriber",
+    description: "Clinical consultation transcription and analysis platform. Real-time audio transcription, SOAP note generation, medication logging, and ambient clinical intelligence for healthcare professionals.",
+    tech: ["TypeScript", "React", "Node.js", "Audio Processing", "AI/NLP", "Healthcare"],
+    github: "https://github.com/ISHANT57/Goqii-Transcriber-",
+    demo: null,
+    accentColor: "#ec4899",
+    screenshotUrl: null,
+  },
 ];
 
 const MAX_TAGS = 4;
