@@ -178,10 +178,10 @@ export function FeaturedProject() {
                 <SiGithub className="w-4 h-4" /> View Source
               </a>
               <a
-                href="https://gitabot-nyd-2026--ishantbhoyar59.replit.app/"
+                href="https://gitabot-hl2n.onrender.com/"
                 target="_blank"
                 rel="noreferrer"
-                onClick={(e) => { e.preventDefault(); goExternal("https://gitabot-nyd-2026--ishantbhoyar59.replit.app/"); }}
+                onClick={(e) => { e.preventDefault(); goExternal("https://gitabot-hl2n.onrender.com/"); }}
                 className="flex items-center gap-2 px-5 py-2.5 rounded-xl text-sm font-semibold transition-all hover:-translate-y-0.5"
                 style={{
                   background: "var(--s2)",

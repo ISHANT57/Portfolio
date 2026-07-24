@@ -83,7 +83,7 @@ const projects: Project[] = [
     github: "https://github.com/ISHANT57/CampusAgent",
     demo: "https://campus-agent-six.vercel.app/",
     accentColor: "#06b6d4",
-    screenshotUrl: "https://image.thum.io/get/width/800/height/500/crop/200/noanimate/https://campus-agent-six.vercel.app/",
+    screenshotUrl: "/screenshots/campus-agent.png",
   },
   {
     id: "09",
@@ -93,7 +93,7 @@ const projects: Project[] = [
     github: "https://github.com/ISHANT57/CampusBrain",
     demo: "https://campus-brain-inky.vercel.app/sitare",
     accentColor: "#6366f1",
-    screenshotUrl: "https://image.thum.io/get/width/800/height/500/crop/200/noanimate/https://campus-brain-inky.vercel.app/sitare",
+    screenshotUrl: "/screenshots/campus-brain.png",
   },
   {
     id: "10",

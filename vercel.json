@@ -1,0 +1,7 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "buildCommand": "pnpm install && pnpm --filter @workspace/portfolio run build",
+  "outputDirectory": "artifacts/portfolio/dist/public",
+  "installCommand": "pnpm install",
+  "rewrites": [{ "source": "/(.*)", "destination": "/index.html" }]
+}

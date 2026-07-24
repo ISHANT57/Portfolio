@@ -5,34 +5,10 @@ import path from "path";
 
 const port = Number(process.env.PORT ?? 3000);
 const basePath = process.env.BASE_PATH ?? "/";
-const isDev = process.env.NODE_ENV !== "production";
-const isReplit = process.env.REPL_ID !== undefined;
 
 export default defineConfig({
   base: basePath,
-  plugins: [
-    react(),
-    tailwindcss(),
-    ...(isDev
-      ? [
-          await import("@replit/vite-plugin-runtime-error-modal").then((m) =>
-            m.default(),
-          ),
-          ...(isReplit
-            ? [
-                await import("@replit/vite-plugin-cartographer").then((m) =>
-                  m.cartographer({
-                    root: path.resolve(import.meta.dirname, ".."),
-                  }),
-                ),
-                await import("@replit/vite-plugin-dev-banner").then((m) =>
-                  m.devBanner(),
-                ),
-              ]
-            : []),
-        ]
-      : []),
-  ],
+  plugins: [react(), tailwindcss()],
   resolve: {
     alias: {
       "@": path.resolve(import.meta.dirname, "src"),
