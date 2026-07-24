@@ -83,7 +83,7 @@ const projects: Project[] = [
     github: "https://github.com/ISHANT57/CampusAgent",
     demo: "https://campus-agent-six.vercel.app/",
     accentColor: "#06b6d4",
-    screenshotUrl: "https://image.thum.io/get/width/640/crop/400/noanimate/https://campus-agent-six.vercel.app/",
+    screenshotUrl: "https://image.thum.io/get/width/800/height/500/crop/200/noanimate/https://campus-agent-six.vercel.app/",
   },
   {
     id: "09",
@@ -93,7 +93,7 @@ const projects: Project[] = [
     github: "https://github.com/ISHANT57/CampusBrain",
     demo: "https://campus-brain-inky.vercel.app/sitare",
     accentColor: "#6366f1",
-    screenshotUrl: "https://image.thum.io/get/width/640/crop/400/noanimate/https://campus-brain-inky.vercel.app/sitare",
+    screenshotUrl: "https://image.thum.io/get/width/800/height/500/crop/200/noanimate/https://campus-brain-inky.vercel.app/sitare",
   },
   {
     id: "10",
@@ -103,7 +103,7 @@ const projects: Project[] = [
     github: "https://github.com/ISHANT57/Goqii-Transcriber-",
     demo: "https://goqii-transcriber-web.vercel.app/",
     accentColor: "#ec4899",
-    screenshotUrl: "https://image.thum.io/get/width/640/crop/400/noanimate/https://goqii-transcriber-web.vercel.app/",
+    screenshotUrl: "https://image.thum.io/get/width/800/height/500/crop/200/noanimate/https://goqii-transcriber-web.vercel.app/",
   },
   {
     id: "11",
@@ -113,7 +113,7 @@ const projects: Project[] = [
     github: "https://github.com/ISHANT57/CareNexus",
     demo: "https://carenexusweb-q5ijcqplh-ishant57s-projects.vercel.app/",
     accentColor: "#8b5cf6",
-    screenshotUrl: "https://image.thum.io/get/width/640/crop/400/noanimate/https://carenexusweb-q5ijcqplh-ishant57s-projects.vercel.app/",
+    screenshotUrl: "https://image.thum.io/get/width/800/height/500/crop/200/noanimate/https://carenexusweb-q5ijcqplh-ishant57s-projects.vercel.app/",
   },
 ];
 
