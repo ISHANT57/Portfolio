@@ -2,7 +2,7 @@
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "framework": null,
   "installCommand": "pnpm install --filter \"@workspace/portfolio...\" --frozen-lockfile",
-  "buildCommand": "pnpm --filter @workspace/portfolio run build",
-  "outputDirectory": "artifacts/portfolio/dist/public",
+  "buildCommand": "pnpm --filter @workspace/portfolio run build && rm -rf public && cp -r artifacts/portfolio/dist/public public",
+  "outputDirectory": "public",
   "rewrites": [{ "source": "/(.*)", "destination": "/index.html" }]
 }
