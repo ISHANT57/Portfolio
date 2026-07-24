@@ -25,7 +25,7 @@ export function About() {
             </h2>
 
             <p className="text-foreground/60 leading-relaxed mb-8 text-base md:text-lg">
-              I'm a Computer Science undergraduate at Sitare University, driven by a passion for building robust, scalable applications and integrating cutting-edge AI technologies. From designing RAG pipelines to building real-time analytics dashboards, I turn complex problems into clean, working software.
+              I'm a Computer Science undergraduate at Sitare University building production-grade AI systems — autonomous agents that plan and call tools, multi-tenant RAG platforms with hybrid retrieval, and real-time clinical transcription pipelines. From information-retrieval engines built from scratch to Next.js apps backed by queues and vector databases, I turn complex problems into clean, working software.
             </p>
 
             {/* Education card */}
@@ -115,9 +115,9 @@ export function About() {
                   {"  "}<span style={{ color: "var(--t5)" }}>{"}"}</span><span style={{ color: "var(--t5)" }}>,</span>{"\n"}
                   {"  "}<span style={{ color: "#60a5fa" }}>"scholarship"</span><span style={{ color: "var(--t5)" }}>: </span><span style={{ color: "#c084fc" }}>true</span><span style={{ color: "var(--t5)" }}>,</span>{"\n"}
                   {"  "}<span style={{ color: "#60a5fa" }}>"specializations"</span><span style={{ color: "var(--t5)" }}>: [</span>{"\n"}
-                  {"    "}<span style={{ color: "#4ade80" }}>"RAG Pipelines"</span><span style={{ color: "var(--t5)" }}>,</span>{"\n"}
-                  {"    "}<span style={{ color: "#4ade80" }}>"NLP & Vector Databases"</span><span style={{ color: "var(--t5)" }}>,</span>{"\n"}
-                  {"    "}<span style={{ color: "#4ade80" }}>"Full Stack Development"</span><span style={{ color: "var(--t5)" }}>,</span>{"\n"}
+                  {"    "}<span style={{ color: "#4ade80" }}>"Autonomous AI Agents"</span><span style={{ color: "var(--t5)" }}>,</span>{"\n"}
+                  {"    "}<span style={{ color: "#4ade80" }}>"Hybrid RAG & Vector Search"</span><span style={{ color: "var(--t5)" }}>,</span>{"\n"}
+                  {"    "}<span style={{ color: "#4ade80" }}>"Full Stack (Next.js / Node)"</span><span style={{ color: "var(--t5)" }}>,</span>{"\n"}
                   {"    "}<span style={{ color: "#4ade80" }}>"AI-driven Health Tech"</span>{"\n"}
                   {"  "}<span style={{ color: "var(--t5)" }}>],</span>{"\n"}
                   {"  "}<span style={{ color: "#60a5fa" }}>"open_to_work"</span><span style={{ color: "var(--t5)" }}>: </span><span style={{ color: "#c084fc" }}>true</span>{"\n"}

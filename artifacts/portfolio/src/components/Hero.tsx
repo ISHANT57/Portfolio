@@ -109,7 +109,7 @@ export function Hero() {
             </div>
 
             <p className="text-base md:text-lg text-foreground/60 max-w-lg leading-relaxed">
-              CS undergrad building scalable full-stack systems and AI-powered applications — from RAG pipelines to real-time analytics dashboards. Passionate about AI-driven health-tech.
+              CS undergrad building scalable full-stack systems and AI-powered applications — autonomous agents, hybrid RAG platforms, and real-time clinical tools. Next.js, Python & production LLM systems.
             </p>
 
             <div className="flex flex-wrap gap-3 mt-1">
@@ -197,7 +197,7 @@ export function Hero() {
             {/* Stats */}
             <div className="grid grid-cols-3 gap-6 mt-6 pt-6 w-full border-t" style={{ borderColor: "var(--b4)" }}>
               {[
-                { label: "PROJECTS", counter: <AnimatedCounter to={4} /> },
+                { label: "PROJECTS", counter: <AnimatedCounter to={10} suffix="+" /> },
                 { label: "GPA", counter: <AnimatedCounter to={7.94} decimals={2} /> },
                 { label: "SCHOLARSHIP", counter: <AnimatedCounter to={100} suffix="%" /> },
               ].map((stat, i) => (
@@ -263,9 +263,9 @@ export function Hero() {
                     style={{ background: "rgba(99,102,241,0.1)", border: "1px solid rgba(99,102,241,0.2)" }}
                   >
                     Ishant specializes in{" "}
-                    <span style={{ color: "#a78bfa" }} className="font-medium">RAG Pipelines</span>,{" "}
+                    <span style={{ color: "#a78bfa" }} className="font-medium">AI Agents &amp; RAG</span>,{" "}
                     <span style={{ color: "#818cf8" }} className="font-medium">Full Stack Dev</span>, and{" "}
-                    <span style={{ color: "#a78bfa" }} className="font-medium">AI Systems</span>. Python, React &amp; Node.js are his core stack.
+                    <span style={{ color: "#a78bfa" }} className="font-medium">LLM Systems</span>. Python, TypeScript, Next.js &amp; Node.js are his core stack.
                   </div>
                 </div>
 

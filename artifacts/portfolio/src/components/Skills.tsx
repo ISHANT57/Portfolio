@@ -2,10 +2,10 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import {
   SiPython, SiJavascript, SiTypescript,
-  SiReact, SiNodedotjs, SiFlask,
-  SiMysql, SiMongodb, SiPostgresql, SiGraphql,
-  SiGit, SiGithub, SiTailwindcss, SiPandas, SiNumpy,
-  SiHtml5, SiCss, SiExpress, SiHuggingface, SiOpenai
+  SiReact, SiNodedotjs, SiFlask, SiNextdotjs,
+  SiMysql, SiMongodb, SiPostgresql, SiGraphql, SiSupabase, SiRedis,
+  SiGit, SiGithub, SiTailwindcss, SiPandas, SiNumpy, SiDocker,
+  SiHtml5, SiCss, SiExpress, SiHuggingface, SiOpenrouter, SiGooglegemini
 } from "react-icons/si";
 import { FaJava } from "react-icons/fa";
 
@@ -38,29 +38,35 @@ const TABS = [
 ];
 
 const SKILLS: Skill[] = [
-  { name: "Python",        icon: SiPython,       color: "#3b82f6",  cat: "languages", level: "Advanced",      context: "Primary language for AI/ML & backend APIs" },
+  { name: "Python",        icon: SiPython,       color: "#3b82f6",  cat: "languages", level: "Advanced",      context: "Primary language for AI/ML, agents & backend APIs" },
+  { name: "TypeScript",    icon: SiTypescript,   color: "#60a5fa",  cat: "languages", level: "Advanced",      context: "Type-safe full-stack apps across 15+ repos" },
   { name: "JavaScript",    icon: SiJavascript,   color: "#eab308",  cat: "languages", level: "Advanced",      context: "Full-stack development & browser scripting" },
-  { name: "TypeScript",    icon: SiTypescript,   color: "#60a5fa",  cat: "languages", level: "Intermediate",  context: "Type-safe React & Node.js applications" },
   { name: "Java",          icon: FaJava,         color: "#f97316",  cat: "languages", level: "Intermediate",  context: "OOP, DSA & custom interpreter design" },
   { name: "React.js",      icon: SiReact,        color: "#38bdf8",  cat: "frontend",  level: "Advanced",      context: "SPAs, dashboards & real-time UIs" },
+  { name: "Next.js",       icon: SiNextdotjs,    color: "#e2e8f0",  cat: "frontend",  level: "Advanced",      context: "Next.js 15 App Router — Goqii clinical platform" },
   { name: "Tailwind CSS",  icon: SiTailwindcss,  color: "#38bdf8",  cat: "frontend",  level: "Advanced",      context: "Utility-first styling across all projects" },
   { name: "HTML5",         icon: SiHtml5,        color: "#f97316",  cat: "frontend",  level: "Expert",        context: "Semantic markup & web accessibility" },
   { name: "CSS3",          icon: SiCss,          color: "#60a5fa",  cat: "frontend",  level: "Expert",        context: "Animations, layouts & responsive design" },
-  { name: "Node.js",       icon: SiNodedotjs,    color: "#4ade80",  cat: "backend",   level: "Intermediate",  context: "REST APIs & real-time server applications" },
-  { name: "Flask",         icon: SiFlask,        color: "#e2e8f0",  cat: "backend",   level: "Intermediate",  context: "Python web APIs & ML model backends" },
-  { name: "GraphQL",       icon: SiGraphql,      color: "#e879f9",  cat: "backend",   level: "Intermediate",  context: "Used in LeetCode Tracker for efficient queries" },
-  { name: "Express",       icon: SiExpress,      color: "#6b7280",  cat: "backend",   level: "Intermediate",  context: "Node.js middleware & routing layer" },
-  { name: "PostgreSQL",    icon: SiPostgresql,   color: "#60a5fa",  cat: "databases", level: "Intermediate",  context: "Primary relational DB with complex queries" },
+  { name: "Node.js",       icon: SiNodedotjs,    color: "#4ade80",  cat: "backend",   level: "Advanced",      context: "REST APIs, queues & real-time servers" },
+  { name: "Express",       icon: SiExpress,      color: "#6b7280",  cat: "backend",   level: "Advanced",      context: "Node.js middleware & routing layer" },
+  { name: "Flask",         icon: SiFlask,        color: "#e2e8f0",  cat: "backend",   level: "Advanced",      context: "Python web APIs, ML & IR backends" },
+  { name: "BullMQ / Redis",icon: SiRedis,        color: "#ef4444",  cat: "backend",   level: "Intermediate",  context: "Durable job queues for the ASR pipeline" },
+  { name: "GraphQL",       icon: SiGraphql,      color: "#e879f9",  cat: "backend",   level: "Intermediate",  context: "Efficient queries in LeetCode Tracker" },
+  { name: "JWT / RBAC",    icon: null, abbr: "JWT", color: "#22d3ee", cat: "backend", level: "Intermediate",  context: "Role-based auth for multi-tenant RAG" },
+  { name: "PostgreSQL",    icon: SiPostgresql,   color: "#60a5fa",  cat: "databases", level: "Advanced",      context: "Relational DB with complex queries" },
+  { name: "Supabase",      icon: SiSupabase,     color: "#4ade80",  cat: "databases", level: "Intermediate",  context: "Postgres, RLS & storage for Goqii" },
+  { name: "Qdrant",        icon: null, abbr: "QD", color: "#a78bfa", cat: "databases", level: "Advanced",     context: "Per-tenant vector store for hybrid RAG" },
   { name: "MongoDB",       icon: SiMongodb,      color: "#4ade80",  cat: "databases", level: "Intermediate",  context: "Document store for Node.js applications" },
   { name: "MySQL",         icon: SiMysql,        color: "#38bdf8",  cat: "databases", level: "Intermediate",  context: "Schema design & query optimization" },
-  { name: "Qdrant",        icon: null, abbr: "QD", color: "#a78bfa", cat: "databases", level: "Intermediate", context: "Vector DB powering RAG semantic search" },
+  { name: "AI Agents",     icon: SiOpenrouter,       color: "#c084fc",  cat: "tools",     level: "Advanced",      context: "Autonomous tool-calling, memory & reflection loops" },
+  { name: "RAG Pipelines", icon: SiOpenrouter,       color: "#c084fc",  cat: "tools",     level: "Advanced",      context: "BGE-M3 hybrid retrieval, BM25 + RRF fusion, cited answers" },
+  { name: "Gemini API",    icon: SiGooglegemini, color: "#60a5fa",  cat: "tools",     level: "Advanced",      context: "SOAP note & prescription generation" },
+  { name: "NLP",           icon: SiHuggingface,  color: "#f59e0b",  cat: "tools",     level: "Advanced",      context: "Embeddings, ASR, tokenization & IR" },
+  { name: "Docker",        icon: SiDocker,       color: "#38bdf8",  cat: "tools",     level: "Intermediate",  context: "Compose stacks for RAG & services" },
   { name: "Git",           icon: SiGit,          color: "#f97316",  cat: "tools",     level: "Advanced",      context: "Version control & team collaboration" },
   { name: "GitHub",        icon: SiGithub,       color: "#c4b5fd",  cat: "tools",     level: "Advanced",      context: "Open source, CI/CD & code reviews" },
   { name: "Pandas",        icon: SiPandas,       color: "#60a5fa",  cat: "tools",     level: "Intermediate",  context: "Data wrangling & analysis pipelines" },
   { name: "NumPy",         icon: SiNumpy,        color: "#60a5fa",  cat: "tools",     level: "Intermediate",  context: "Numerical computing & matrix ops" },
-  { name: "RAG Pipelines", icon: SiOpenai,       color: "#c084fc",  cat: "tools",     level: "Intermediate",  context: "AI Q&A with Mistral embeddings + Qdrant" },
-  { name: "NLP",           icon: SiHuggingface,  color: "#f59e0b",  cat: "tools",     level: "Intermediate",  context: "Text processing, tokenization & embeddings" },
-  { name: "BeautifulSoup", icon: null, abbr: "BS", color: "#4ade80", cat: "tools",    level: "Intermediate",  context: "HTML parsing & web scraping" },
 ];
 
 const ROW1 = SKILLS.filter(s => s.cat === "languages" || s.cat === "frontend");
