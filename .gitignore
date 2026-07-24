@@ -20,7 +20,7 @@ node_modules
 *.launch
 .settings/
 *.sublime-workspace
-
+readm.md
 # IDE - VSCode
 .vscode/*
 !.vscode/settings.json
