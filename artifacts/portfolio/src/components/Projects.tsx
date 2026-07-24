@@ -103,7 +103,7 @@ const projects: Project[] = [
     github: "https://github.com/ISHANT57/Goqii-Transcriber-",
     demo: "https://goqii-transcriber-web.vercel.app/",
     accentColor: "#ec4899",
-    screenshotUrl: "https://image.thum.io/get/width/800/height/500/crop/200/noanimate/https://goqii-transcriber-web.vercel.app/",
+    screenshotUrl: "/screenshots/goqii-transcriber.png",
   },
   {
     id: "11",
