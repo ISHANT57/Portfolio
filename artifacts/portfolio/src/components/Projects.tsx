@@ -17,6 +17,16 @@ interface Project {
 const projects: Project[] = [
   {
     id: "01",
+    title: "Alarsio",
+    description: "Offline-first construction operations platform: supervisors record attendance, reports and materials on an Android app without signal; owners approve days and run wages on the web.",
+    tech: ["Next.js", "React Native", "Supabase", "PostgreSQL", "TypeScript", "SQLite"],
+    github: "https://github.com/alarsio-labs/alarsio-web",
+    demo: "https://www.alarsio.com",
+    accentColor: "#f0523d",
+    screenshotUrl: "/screenshots/alarsio.webp",
+  },
+  {
+    id: "02",
     title: "AI-Powered Q&A for Sacred Texts",
     description: "AI Q&A system handling multiple concurrent queries using semantic search and RAG. Engineered a high-dimensional search pipeline with Mistral embeddings and Qdrant vector database for high relevance.",
     tech: ["Python", "RAG Pipeline", "Mistral", "Qdrant", "Flask", "NLP", "Pandas", "NumPy"],
@@ -26,7 +36,7 @@ const projects: Project[] = [
     screenshotUrl: "/screenshots/dharmabot.webp",
   },
   {
-    id: "02",
+    id: "03",
     title: "Goqii Transcriber",
     description: "Clinical consultation transcription and analysis platform. Real-time audio transcription, SOAP note generation, medication logging, and ambient clinical intelligence for healthcare professionals.",
     tech: ["TypeScript", "React", "Node.js", "Audio Processing", "AI/NLP", "Healthcare"],
@@ -36,7 +46,7 @@ const projects: Project[] = [
     screenshotUrl: "/screenshots/goqii-transcriber.webp",
   },
   {
-    id: "03",
+    id: "04",
     title: "CampusBrain",
     description: "Educational RAG platform providing instant answers to questions about college campuses, scholarships, and academic programs. Grounded in university documents with source citations.",
     tech: ["React", "Node.js", "RAG Pipeline", "LLM", "Tailwind CSS", "NLP"],
@@ -46,7 +56,7 @@ const projects: Project[] = [
     screenshotUrl: "/screenshots/campus-brain.webp",
   },
   {
-    id: "04",
+    id: "05",
     title: "GitHub Profile Tracker",
     description: "Developer analytics dashboard visualising GitHub profile stats — repositories, contributions, top languages, and activity trends — powered by the GitHub REST API.",
     tech: ["React", "TypeScript", "GitHub API", "Chart.js", "Tailwind CSS"],
@@ -56,7 +66,7 @@ const projects: Project[] = [
     screenshotUrl: "/screenshots/git-tracker.webp",
   },
   {
-    id: "05",
+    id: "06",
     title: "CampusAgent",
     description: "Intelligent Q&A agent for campus information retrieval using RAG and semantic search. Answers student queries about admissions, academics, campus life, and more with cited sources.",
     tech: ["Python", "RAG", "LLM", "Semantic Search", "Flask", "Vector DB"],
@@ -66,7 +76,7 @@ const projects: Project[] = [
     screenshotUrl: "/screenshots/campus-agent.webp",
   },
   {
-    id: "06",
+    id: "07",
     title: "CareNexus",
     description: "Comprehensive healthcare platform for managing hospitals, clinics, and patient care. Features multi-tenant support, appointment scheduling, patient tracking, doctor/staff management, and analytics dashboards for healthcare providers.",
     tech: ["React", "Node.js", "PostgreSQL", "Dashboard", "Healthcare", "Multi-tenant"],
@@ -76,7 +86,7 @@ const projects: Project[] = [
     screenshotUrl: "/screenshots/carenexus.webp",
   },
   {
-    id: "07",
+    id: "08",
     title: "AI Resume Analyzer",
     description: "AI-powered resume analysis platform that scores resumes against job descriptions, highlights skill gaps, and gives actionable improvement suggestions using NLP.",
     tech: ["TypeScript", "React", "Node.js", "AI/NLP", "Tailwind CSS"],
@@ -86,7 +96,7 @@ const projects: Project[] = [
     screenshotUrl: "/screenshots/resume-analyzer.webp",
   },
   {
-    id: "08",
+    id: "09",
     title: "ZARA Web IDE",
     description: "Browser-based IDE for the ZARA scripting language with syntax highlighting, real-time code execution, and an interactive output console — built in TypeScript.",
     tech: ["TypeScript", "React", "Code Editor", "ZARA", "Vite"],
@@ -96,7 +106,7 @@ const projects: Project[] = [
     screenshotUrl: "/screenshots/zara-ide.webp",
   },
   {
-    id: "09",
+    id: "10",
     title: "LeetCode Student Progress Tracker",
     description: "Full-stack web app tracking 100+ students with real-time performance analytics, interactive dashboards with heatmaps and charts, powered by GraphQL APIs.",
     tech: ["React.js", "Node.js", "PostgreSQL", "Chart.js", "Tailwind CSS", "GraphQL"],
@@ -106,7 +116,7 @@ const projects: Project[] = [
     screenshotUrl: "/screenshots/leetcode-tracker.webp",
   },
   {
-    id: "10",
+    id: "11",
     title: "AQI Website Analysis Platform",
     description: "Real-time AQI monitoring platform with historical trend analysis using interactive maps and charts. Enables comparative analysis across cities with dynamic health insights.",
     tech: ["JavaScript", "Flask", "HTML/CSS", "Chart.js", "Python", "Pandas"],
@@ -116,7 +126,7 @@ const projects: Project[] = [
     screenshotUrl: "/screenshots/aqi.webp",
   },
   {
-    id: "11",
+    id: "12",
     title: "Contest Arena",
     description: "Self-hosted Codeforces-style contest platform: write Java or Python in the browser, submit against hidden tests, and follow a live leaderboard and host dashboard.",
     tech: ["Python", "Java", "JavaScript", "HTML/CSS", "Judge Engine"],
@@ -126,7 +136,7 @@ const projects: Project[] = [
     screenshotUrl: "/screenshots/contest-arena.webp",
   },
   {
-    id: "12",
+    id: "13",
     title: "CPS Mock Exam",
     description: "Practice exams for Git, Docker, CI and database migrations: 541 questions and 72 hands-on labs graded on real commands, plus timed exams and a live study-room leaderboard.",
     tech: ["Python", "JavaScript", "Git", "Docker", "PostgreSQL"],

@@ -11,7 +11,7 @@ Personal portfolio of a full-stack developer and AI engineer: projects, experien
 ## What is on the site
 
 - **Hero, About, Experience, Skills** — who I am, what I have built and the tools I use.
-- **Featured project and 12 project cards** — each with a screenshot, tech tags, and links to the live demo or source where they are public. Projects without a public repository or hosted demo say so on the card.
+- **Featured project and 13 project cards** — each with a screenshot, tech tags, and links to the live demo or source where they are public. Projects without a public repository or hosted demo say so on the card.
 - **LeetCode stats and GitHub repositories** — pulled from public profiles.
 - **Command palette** — press `Ctrl/⌘ + K` to jump to any section.
 - **Contact form** — handled by the small API server in `artifacts/api-server`.
