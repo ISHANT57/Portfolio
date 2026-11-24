@@ -22,7 +22,7 @@ const SOCIALS = [
 
 export function Footer() {
   return (
-    <footer className="relative" style={{ borderTop: "1px solid rgba(255,255,255,0.06)" }} data-testid="footer">
+    <footer className="relative overflow-hidden" style={{ borderTop: "1px solid rgba(255,255,255,0.06)" }} data-testid="footer">
       <div className="orb w-[500px] h-[300px] bg-violet-600/6 bottom-0 left-1/2 -translate-x-1/2 pointer-events-none" />
 
       <div className="container mx-auto px-4 md:px-8 py-16">
@@ -44,7 +44,7 @@ export function Footer() {
               </div>
               <span className="font-bold text-base" style={{ color: "rgba(255,255,255,0.9)" }}>Ishant Bhoyar</span>
             </div>
-            <p className="text-sm leading-relaxed max-w-xs" style={{ color: "rgba(255,255,255,0.35)" }}>
+            <p className="text-sm leading-relaxed max-w-xs" style={{ color: "rgba(255,255,255,0.62)" }}>
               CS undergrad & Full Stack + AI Engineer dedicated to crafting immersive, high-performance
               digital experiences with cutting-edge technology.
             </p>
@@ -58,7 +58,7 @@ export function Footer() {
             transition={{ duration: 0.5, delay: 0.1 }}
           >
             <p className="text-[11px] font-mono font-semibold tracking-[0.18em] uppercase mb-5"
-              style={{ color: "rgba(255,255,255,0.35)" }}>
+              style={{ color: "rgba(255,255,255,0.62)" }}>
               Navigation
             </p>
             <ul className="space-y-3">
@@ -84,7 +84,7 @@ export function Footer() {
             transition={{ duration: 0.5, delay: 0.2 }}
           >
             <p className="text-[11px] font-mono font-semibold tracking-[0.18em] uppercase mb-5"
-              style={{ color: "rgba(255,255,255,0.35)" }}>
+              style={{ color: "rgba(255,255,255,0.62)" }}>
               Connect
             </p>
             <div className="space-y-3 mb-7">
@@ -118,7 +118,7 @@ export function Footer() {
                     style={{
                       background: "rgba(255,255,255,0.05)",
                       border: "1px solid rgba(255,255,255,0.08)",
-                      color: "rgba(255,255,255,0.45)",
+                      color: "rgba(255,255,255,0.62)",
                     }}
                     onMouseEnter={e => {
                       (e.currentTarget as HTMLButtonElement).style.background = `${s.color}15`;
@@ -133,7 +133,7 @@ export function Footer() {
                     aria-label={s.label}
                     title={s.label}
                   >
-                    <Icon className="w-4 h-4" />
+                    <Icon aria-hidden="true" className="w-4 h-4" />
                   </motion.button>
                 );
               })}
@@ -144,7 +144,7 @@ export function Footer() {
         {/* Bottom bar */}
         <div
           className="flex flex-col sm:flex-row items-center justify-between gap-3 pt-8 text-xs font-mono"
-          style={{ borderTop: "1px solid rgba(255,255,255,0.06)", color: "rgba(255,255,255,0.25)" }}
+          style={{ borderTop: "1px solid rgba(255,255,255,0.06)", color: "rgba(255,255,255,0.62)" }}
         >
           <span>© {new Date().getFullYear()} Ishant Bhoyar. All rights reserved.</span>
           <span className="flex items-center gap-1">

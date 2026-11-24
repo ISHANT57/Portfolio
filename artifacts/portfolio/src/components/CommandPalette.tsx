@@ -20,7 +20,7 @@ interface Cmd {
   keywords?: string[];
 }
 
-const GithubIcon: IconComp = ({ className }) => <SiGithub className={className} />;
+const GithubIcon: IconComp = ({ className }) => <SiGithub aria-hidden="true" className={className} />;
 const LinkedinIcon: IconComp = ({ className }) => <Linkedin className={className} />;
 
 export function CommandPalette() {
@@ -206,7 +206,7 @@ export function CommandPalette() {
                               color: isActive ? "#a78bfa" : "var(--t4)"
                             }}
                           >
-                            <Icon className="w-3.5 h-3.5" />
+                            <Icon aria-hidden="true" className="w-3.5 h-3.5" />
                           </div>
                           <div className="flex-1 min-w-0">
                             <p

@@ -70,7 +70,7 @@ export function Experience() {
               </p>
 
               <div className="flex flex-wrap gap-2">
-                <span className="text-[11px] font-mono uppercase tracking-wider text-foreground/40 self-center mr-1">
+                <span className="text-[11px] font-mono uppercase tracking-wider text-foreground/60 self-center mr-1">
                   Projects
                 </span>
                 {projects.map((p) => (

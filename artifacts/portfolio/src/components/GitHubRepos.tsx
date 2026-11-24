@@ -123,7 +123,7 @@ export function GitHubRepos() {
                 ].map(stat => (
                   <div key={stat.label} className="text-center">
                     <div className="text-lg font-bold text-gradient">{stat.value}</div>
-                    <div className="text-xs font-mono text-foreground/40">{stat.label}</div>
+                    <div className="text-xs font-mono text-foreground/60">{stat.label}</div>
                   </div>
                 ))}
               </div>
@@ -141,7 +141,7 @@ export function GitHubRepos() {
               }}
               data-testid="link-github-profile"
             >
-              <SiGithub className="w-4 h-4" />
+              <SiGithub aria-hidden="true" className="w-4 h-4" />
               @{GITHUB_USERNAME}
               <ExternalLink className="w-3 h-3" />
             </a>
@@ -208,12 +208,12 @@ export function GitHubRepos() {
               >
                 <div className="flex items-start justify-between gap-2">
                   <div className="flex items-center gap-2 min-w-0">
-                    <SiGithub className="w-4 h-4 shrink-0 text-foreground/40" />
+                    <SiGithub aria-hidden="true" className="w-4 h-4 shrink-0 text-foreground/60" />
                     <span className="font-semibold text-sm text-foreground/90 truncate group-hover:text-foreground transition-colors">
                       {repo.name}
                     </span>
                   </div>
-                  <ExternalLink className="w-3.5 h-3.5 shrink-0 text-foreground/20 group-hover:text-foreground/60 transition-colors" />
+                  <ExternalLink className="w-3.5 h-3.5 shrink-0 text-foreground/60 group-hover:text-foreground/60 transition-colors" />
                 </div>
 
                 <p className="text-xs text-foreground/50 leading-relaxed line-clamp-2 flex-1 min-h-[2.5rem]">
@@ -231,11 +231,11 @@ export function GitHubRepos() {
                     </div>
                   )}
                   <div className="flex items-center gap-3 ml-auto">
-                    <div className="flex items-center gap-1 text-xs text-foreground/40">
+                    <div className="flex items-center gap-1 text-xs text-foreground/60">
                       <Star className="w-3 h-3" />
                       {repo.stargazers_count}
                     </div>
-                    <div className="flex items-center gap-1 text-xs text-foreground/40">
+                    <div className="flex items-center gap-1 text-xs text-foreground/60">
                       <GitFork className="w-3 h-3" />
                       {repo.forks_count}
                     </div>

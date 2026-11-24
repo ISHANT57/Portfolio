@@ -70,7 +70,7 @@ export function FeaturedProject() {
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-10 items-center mb-12">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center mb-12">
           {/* Left — terminal code */}
           <motion.div
             initial={{ opacity: 0, x: -30 }}
@@ -79,7 +79,7 @@ export function FeaturedProject() {
             transition={{ duration: 0.6 }}
           >
             <TerminalPanel title="rag_pipeline.py — Python">
-              <pre className="text-[12px] leading-relaxed overflow-x-auto">
+              <pre tabIndex={0} aria-label="Code sample, scrollable" className="text-[12px] leading-relaxed overflow-x-auto">
                 {codeSnippet.split("\n").map((line, i) => {
                   // Simple syntax highlighting
                   const isComment = line.trimStart().startsWith("#");
@@ -115,7 +115,7 @@ export function FeaturedProject() {
           >
             {/* Architecture highlights */}
             <div>
-              <h3 className="text-sm font-mono text-foreground/40 mb-4 tracking-widest">SYSTEM HIGHLIGHTS</h3>
+              <h3 className="text-sm font-mono text-foreground/60 mb-4 tracking-widest">SYSTEM HIGHLIGHTS</h3>
               <div className="space-y-3">
                 {highlights.map((h, i) => (
                   <motion.div
@@ -138,7 +138,7 @@ export function FeaturedProject() {
 
             {/* Tech Stack */}
             <div>
-              <h3 className="text-sm font-mono text-foreground/40 mb-4 tracking-widest">TECH STACK</h3>
+              <h3 className="text-sm font-mono text-foreground/60 mb-4 tracking-widest">TECH STACK</h3>
               <div className="flex flex-wrap gap-2">
                 {techStack.map(tech => {
                   const Icon = tech.icon;
@@ -152,7 +152,7 @@ export function FeaturedProject() {
                         color: tech.color
                       }}
                     >
-                      {Icon && <Icon className="w-3.5 h-3.5" />}
+                      {Icon && <Icon aria-hidden="true" className="w-3.5 h-3.5" />}
                       {tech.name}
                     </div>
                   );
@@ -175,7 +175,7 @@ export function FeaturedProject() {
                 }}
                 data-testid="link-featured-github"
               >
-                <SiGithub className="w-4 h-4" /> View Source
+                <SiGithub aria-hidden="true" className="w-4 h-4" /> View Source
               </a>
               <a
                 href="https://gitabot-hl2n.onrender.com/"

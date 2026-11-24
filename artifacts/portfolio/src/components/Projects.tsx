@@ -1,14 +1,14 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { Globe, Code2 } from "lucide-react";
-import { goExternal } from "@/lib/utils";
 
 interface Project {
   id: string;
   title: string;
   description: string;
   tech: string[];
-  github: string;
+  /** Public source link, or null when the code is not public. */
+  github: string | null;
   demo: string | null;
   accentColor: string;
   screenshotUrl: string | null;
@@ -23,7 +23,7 @@ const projects: Project[] = [
     github: "https://github.com/ISHANT57/Gitabot_NYD_2026",
     demo: "https://gitabot-hl2n.onrender.com/",
     accentColor: "#8b5cf6",
-    screenshotUrl: "/screenshots/dharmabot.png",
+    screenshotUrl: "/screenshots/dharmabot.webp",
   },
   {
     id: "02",
@@ -33,7 +33,7 @@ const projects: Project[] = [
     github: "https://github.com/ISHANT57/Goqii-Transcriber-",
     demo: "https://goqii-transcriber-web.vercel.app/",
     accentColor: "#ec4899",
-    screenshotUrl: "/screenshots/goqii-transcriber.png",
+    screenshotUrl: "/screenshots/goqii-transcriber.webp",
   },
   {
     id: "03",
@@ -43,7 +43,7 @@ const projects: Project[] = [
     github: "https://github.com/ISHANT57/CampusBrain",
     demo: "https://campus-brain-inky.vercel.app/sitare",
     accentColor: "#6366f1",
-    screenshotUrl: "/screenshots/campus-brain.png",
+    screenshotUrl: "/screenshots/campus-brain.webp",
   },
   {
     id: "04",
@@ -53,7 +53,7 @@ const projects: Project[] = [
     github: "https://github.com/ISHANT57/Git-Tracker-",
     demo: "https://sitare-github-tracker.onrender.com",
     accentColor: "#f97316",
-    screenshotUrl: "/screenshots/git-tracker.png",
+    screenshotUrl: "/screenshots/git-tracker.webp",
   },
   {
     id: "05",
@@ -63,7 +63,7 @@ const projects: Project[] = [
     github: "https://github.com/ISHANT57/CampusAgent",
     demo: "https://campus-agent-six.vercel.app/",
     accentColor: "#06b6d4",
-    screenshotUrl: "/screenshots/campus-agent.png",
+    screenshotUrl: "/screenshots/campus-agent.webp",
   },
   {
     id: "06",
@@ -73,7 +73,7 @@ const projects: Project[] = [
     github: "https://github.com/ISHANT57/CareNexus",
     demo: "https://carenexusweb-q5ijcqplh-ishant57s-projects.vercel.app/",
     accentColor: "#8b5cf6",
-    screenshotUrl: "/screenshots/carenexus.png",
+    screenshotUrl: "/screenshots/carenexus.webp",
   },
   {
     id: "07",
@@ -83,7 +83,7 @@ const projects: Project[] = [
     github: "https://github.com/ISHANT57/Resume-Analyzer",
     demo: "https://resume-ai-frontend-8f88.onrender.com",
     accentColor: "#10b981",
-    screenshotUrl: "https://image.thum.io/get/width/640/crop/400/noanimate/https://resume-ai-frontend-8f88.onrender.com",
+    screenshotUrl: "/screenshots/resume-analyzer.webp",
   },
   {
     id: "08",
@@ -93,7 +93,7 @@ const projects: Project[] = [
     github: "https://github.com/ISHANT57/Zara-Interpreter-IDE",
     demo: "https://zara-interpreter-ide-zbaf.onrender.com/",
     accentColor: "#f59e0b",
-    screenshotUrl: "/screenshots/zara-ide.png",
+    screenshotUrl: "/screenshots/zara-ide.webp",
   },
   {
     id: "09",
@@ -103,7 +103,7 @@ const projects: Project[] = [
     github: "https://github.com/ISHANT57/LEETCODE-TRACKER",
     demo: "https://leetcode-tracking-system-phi.vercel.app/",
     accentColor: "#3b82f6",
-    screenshotUrl: "/screenshots/leetcode-tracker.png",
+    screenshotUrl: "/screenshots/leetcode-tracker.webp",
   },
   {
     id: "10",
@@ -113,7 +113,27 @@ const projects: Project[] = [
     github: "https://github.com/ISHANT57/AQI-WEBSITE-ANALYSIS",
     demo: "https://aqi-website-analysis-1.onrender.com/",
     accentColor: "#0ea5e9",
-    screenshotUrl: "/screenshots/aqi.png",
+    screenshotUrl: "/screenshots/aqi.webp",
+  },
+  {
+    id: "11",
+    title: "Contest Arena",
+    description: "Self-hosted Codeforces-style contest platform: write Java or Python in the browser, submit against hidden tests, and follow a live leaderboard and host dashboard.",
+    tech: ["Python", "Java", "JavaScript", "HTML/CSS", "Judge Engine"],
+    github: null,
+    demo: null,
+    accentColor: "#14b8a6",
+    screenshotUrl: "/screenshots/contest-arena.webp",
+  },
+  {
+    id: "12",
+    title: "CPS Mock Exam",
+    description: "Practice exams for Git, Docker, CI and database migrations: 541 questions and 72 hands-on labs graded on real commands, plus timed exams and a live study-room leaderboard.",
+    tech: ["Python", "JavaScript", "Git", "Docker", "PostgreSQL"],
+    github: null,
+    demo: null,
+    accentColor: "#6366f1",
+    screenshotUrl: "/screenshots/cps-mock-exam.webp",
   },
 ];
 
@@ -126,7 +146,10 @@ function ProjectThumbnail({ project }: { project: Project }) {
     return (
       <img
         src={project.screenshotUrl}
-        alt={project.title}
+        alt={`Screenshot of ${project.title}`}
+        width={960}
+        height={500}
+        decoding="async"
         className="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-[1.04]"
         onError={() => setImgFailed(true)}
         loading="lazy"
@@ -217,11 +240,11 @@ function ProjectCard({ project, index }: { project: Project; index: number }) {
         </h3>
 
         {/* Description */}
-        <p className="text-sm leading-relaxed flex-1" style={{ color: "rgba(255,255,255,0.45)" }}>
-          {project.description.length > 130
-            ? project.description.slice(0, 130) + "…"
-            : project.description}
-        </p>
+        <div className="flex-1">
+          <p className="text-sm leading-relaxed line-clamp-4" style={{ color: "rgba(255,255,255,0.62)" }}>
+            {project.description}
+          </p>
+        </div>
 
         {/* Tech tags */}
         <div className="flex flex-wrap gap-1.5">
@@ -230,8 +253,8 @@ function ProjectCard({ project, index }: { project: Project; index: number }) {
               key={tech}
               className="text-[11px] font-mono px-2.5 py-1 rounded-lg"
               style={i === 0
-                ? { background: `${project.accentColor}22`, color: project.accentColor, border: `1px solid ${project.accentColor}40` }
-                : { background: "rgba(255,255,255,0.05)", color: "rgba(255,255,255,0.55)", border: "1px solid rgba(255,255,255,0.08)" }
+                ? { background: `${project.accentColor}22`, color: `color-mix(in srgb, ${project.accentColor} 60%, white)`, border: `1px solid ${project.accentColor}40` }
+                : { background: "rgba(255,255,255,0.05)", color: "rgba(255,255,255,0.7)", border: "1px solid rgba(255,255,255,0.08)" }
               }
             >
               {tech}
@@ -240,7 +263,7 @@ function ProjectCard({ project, index }: { project: Project; index: number }) {
           {extraCount > 0 && (
             <span
               className="text-[11px] font-mono px-2.5 py-1 rounded-lg"
-              style={{ background: `${project.accentColor}12`, color: `${project.accentColor}90`, border: `1px solid ${project.accentColor}20` }}
+              style={{ background: `${project.accentColor}12`, color: `color-mix(in srgb, ${project.accentColor} 60%, white)`, border: `1px solid ${project.accentColor}20` }}
             >
               +{extraCount}
             </span>
@@ -250,8 +273,11 @@ function ProjectCard({ project, index }: { project: Project; index: number }) {
         {/* Action buttons */}
         <div className="flex gap-2 pt-1">
           {project.demo ? (
-            <button
-              onClick={() => goExternal(project.demo!)}
+            <a
+              href={project.demo}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label={`Live demo of ${project.title} (opens in a new tab)`}
               className="flex-1 flex items-center justify-center gap-2 py-2.5 rounded-xl text-xs font-semibold transition-all duration-200 hover:scale-[1.02] hover:-translate-y-0.5"
               style={{
                 background: "rgba(255,255,255,0.06)",
@@ -260,35 +286,52 @@ function ProjectCard({ project, index }: { project: Project; index: number }) {
               }}
               data-testid={`link-project-demo-${project.id}`}
             >
-              <Globe className="w-3.5 h-3.5" />
+              <Globe className="w-3.5 h-3.5" aria-hidden="true" />
               LIVE DEMO
-            </button>
+            </a>
           ) : (
             <div
               className="flex-1 flex items-center justify-center gap-2 py-2.5 rounded-xl text-xs font-semibold"
               style={{
                 background: "rgba(255,255,255,0.02)",
                 border: "1px solid rgba(255,255,255,0.05)",
-                color: "rgba(255,255,255,0.2)",
+                color: "rgba(255,255,255,0.5)",
               }}
             >
-              <Globe className="w-3.5 h-3.5" />
-              NO DEMO
+              <Globe className="w-3.5 h-3.5" aria-hidden="true" />
+              NO LIVE DEMO
             </div>
           )}
-          <button
-            onClick={() => goExternal(project.github)}
-            className="flex-1 flex items-center justify-center gap-2 py-2.5 rounded-xl text-xs font-semibold transition-all duration-200 hover:scale-[1.02] hover:-translate-y-0.5"
-            style={{
-              background: "rgba(255,255,255,0.04)",
-              border: "1px solid rgba(255,255,255,0.08)",
-              color: "rgba(255,255,255,0.6)",
-            }}
-            data-testid={`link-project-github-${project.id}`}
-          >
-            <Code2 className="w-3.5 h-3.5" />
-            SOURCE
-          </button>
+          {project.github ? (
+            <a
+              href={project.github}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label={`Source code of ${project.title} (opens in a new tab)`}
+              className="flex-1 flex items-center justify-center gap-2 py-2.5 rounded-xl text-xs font-semibold transition-all duration-200 hover:scale-[1.02] hover:-translate-y-0.5"
+              style={{
+                background: "rgba(255,255,255,0.04)",
+                border: "1px solid rgba(255,255,255,0.08)",
+                color: "rgba(255,255,255,0.75)",
+              }}
+              data-testid={`link-project-github-${project.id}`}
+            >
+              <Code2 className="w-3.5 h-3.5" aria-hidden="true" />
+              SOURCE
+            </a>
+          ) : (
+            <div
+              className="flex-1 flex items-center justify-center gap-2 py-2.5 rounded-xl text-xs font-semibold"
+              style={{
+                background: "rgba(255,255,255,0.02)",
+                border: "1px solid rgba(255,255,255,0.05)",
+                color: "rgba(255,255,255,0.5)",
+              }}
+            >
+              <Code2 className="w-3.5 h-3.5" aria-hidden="true" />
+              SOURCE ON REQUEST
+            </div>
+          )}
         </div>
       </div>
     </motion.div>
@@ -323,7 +366,7 @@ export function Projects() {
           viewport={{ once: true }}
           transition={{ duration: 0.4, delay: 0.1 }}
           className="text-center mb-16 text-sm max-w-lg mx-auto leading-relaxed"
-          style={{ color: "rgba(255,255,255,0.4)" }}
+          style={{ color: "rgba(255,255,255,0.62)" }}
         >
           A selection of high-impact digital solutions, built with focus on scalability,
           performance, and exceptional user experience.
