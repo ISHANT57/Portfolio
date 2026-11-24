@@ -2,12 +2,12 @@ import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
 const BOOT_LINES = [
-  { text: "> Initializing portfolio...", color: "rgba(255,255,255,0.35)" },
-  { text: "> Loading React framework", color: "rgba(255,255,255,0.35)" },
+  { text: "> Initializing portfolio...", color: "rgba(255,255,255,0.62)" },
+  { text: "> Loading React framework", color: "rgba(255,255,255,0.62)" },
   { text: "✓ Framework ready", color: "#4ade80" },
-  { text: "> Mounting AI modules", color: "rgba(255,255,255,0.35)" },
+  { text: "> Mounting AI modules", color: "rgba(255,255,255,0.62)" },
   { text: "✓ AI modules loaded", color: "#4ade80" },
-  { text: "> Connecting project database", color: "rgba(255,255,255,0.35)" },
+  { text: "> Connecting project database", color: "rgba(255,255,255,0.62)" },
   { text: "✓ Welcome — Ishant.dev is ready!", color: "#a78bfa" },
 ];
 
@@ -63,7 +63,7 @@ export function LoadingScreen({ onComplete }: { onComplete: () => void }) {
               </div>
               <div>
                 <p className="font-mono text-sm font-bold text-white/90">Ishant Bhoyar</p>
-                <p className="font-mono text-[10px] text-white/30 tracking-wider">portfolio v2.0</p>
+                <p className="font-mono text-[10px] text-white/60 tracking-wider">portfolio v2.0</p>
               </div>
             </motion.div>
 

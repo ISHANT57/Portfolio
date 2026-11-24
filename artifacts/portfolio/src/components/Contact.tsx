@@ -122,13 +122,13 @@ export function Contact() {
           <h2 className="text-3xl md:text-5xl font-extrabold mt-2">
             Let's <span className="text-gradient">Connect</span>
           </h2>
-          <p className="mt-4 text-sm max-w-md mx-auto leading-relaxed" style={{ color: "rgba(255,255,255,0.4)" }}>
+          <p className="mt-4 text-sm max-w-md mx-auto leading-relaxed" style={{ color: "rgba(255,255,255,0.62)" }}>
             Have a project in mind or just want to say hi? I'm always open to discussing new
             opportunities and creative ideas.
           </p>
         </motion.div>
 
-        <div className="grid lg:grid-cols-2 gap-8 items-start max-w-5xl mx-auto">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start max-w-5xl mx-auto">
 
           {/* LEFT — Send a Message form */}
           <motion.div
@@ -145,7 +145,7 @@ export function Contact() {
           >
             <div className="mb-6">
               <h3 className="text-xl font-bold" style={{ color: "rgba(255,255,255,0.92)" }}>Send a Message</h3>
-              <p className="text-sm mt-1" style={{ color: "rgba(255,255,255,0.35)" }}>I'll get back to you within 24 hours.</p>
+              <p className="text-sm mt-1" style={{ color: "rgba(255,255,255,0.62)" }}>I'll get back to you within 24 hours.</p>
             </div>
 
             <AnimatePresence mode="wait">
@@ -161,7 +161,7 @@ export function Contact() {
                     <Check className="w-8 h-8" style={{ color: "#4ade80" }} />
                   </div>
                   <p className="text-lg font-bold" style={{ color: "rgba(255,255,255,0.9)" }}>Message Sent!</p>
-                  <p className="text-sm text-center" style={{ color: "rgba(255,255,255,0.4)" }}>
+                  <p className="text-sm text-center" style={{ color: "rgba(255,255,255,0.62)" }}>
                     Thanks {form.name}! I'll be in touch soon.
                   </p>
                   <button
@@ -201,7 +201,7 @@ export function Contact() {
                   {/* Email */}
                   <div>
                     <label className="flex items-center gap-2 text-[11px] font-mono font-semibold mb-2 tracking-widest"
-                      style={{ color: "rgba(255,255,255,0.4)" }}>
+                      style={{ color: "rgba(255,255,255,0.62)" }}>
                       <Mail className="w-3 h-3" /> YOUR EMAIL
                     </label>
                     <input
@@ -224,7 +224,7 @@ export function Contact() {
                   {/* Message */}
                   <div>
                     <label className="flex items-center gap-2 text-[11px] font-mono font-semibold mb-2 tracking-widest"
-                      style={{ color: "rgba(255,255,255,0.4)" }}>
+                      style={{ color: "rgba(255,255,255,0.62)" }}>
                       <MessageSquare className="w-3 h-3" /> YOUR MESSAGE
                     </label>
                     <textarea
@@ -318,13 +318,13 @@ export function Contact() {
                             </motion.span>
                           ) : (
                             <motion.span key="icon" initial={{ scale: 0 }} animate={{ scale: 1 }} exit={{ scale: 0 }} transition={{ duration: 0.15 }}>
-                              <Icon className="w-4 h-4" />
+                              <Icon aria-hidden="true" className="w-4 h-4" />
                             </motion.span>
                           )}
                         </AnimatePresence>
                       </div>
                       <div className="min-w-0">
-                        <p className="text-[10px] font-mono tracking-widest mb-0.5" style={{ color: "rgba(255,255,255,0.3)" }}>{item.label}</p>
+                        <p className="text-[10px] font-mono tracking-widest mb-0.5" style={{ color: "rgba(255,255,255,0.62)" }}>{item.label}</p>
                         <p className="text-sm font-semibold truncate transition-colors duration-200 group-hover:text-white"
                           style={{ color: isEmail && copied ? "#4ade80" : "rgba(255,255,255,0.8)" }}>
                           {isEmail && copied ? "Copied!" : item.value}
@@ -368,7 +368,7 @@ export function Contact() {
                       title={social.label}
                       aria-label={social.label}
                     >
-                      <Icon className="w-5 h-5" />
+                      <Icon aria-hidden="true" className="w-5 h-5" />
                     </motion.button>
                   );
                 })}

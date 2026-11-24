@@ -11,7 +11,7 @@ export function About() {
       <div className="container mx-auto px-4 md:px-8">
         <div className="section-divider mb-24" />
 
-        <div className="grid lg:grid-cols-2 gap-16 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           {/* Left Content */}
           <motion.div
             initial={{ opacity: 0, x: -30 }}
@@ -83,7 +83,7 @@ export function About() {
                   <p className="text-sm text-foreground/60">
                     Awarded by the <span className="text-yellow-400 font-medium">Sitare Foundation</span> for academic excellence and potential in computer science.
                   </p>
-                  <p className="text-xs font-mono text-foreground/40 mt-1.5">Aug 2024 – Present</p>
+                  <p className="text-xs font-mono text-foreground/60 mt-1.5">Aug 2024 – Present</p>
                 </div>
               </div>
             </motion.div>
@@ -101,7 +101,7 @@ export function About() {
               style={{ background: "radial-gradient(ellipse at 60% 50%, rgba(99,102,241,0.12) 0%, transparent 70%)" }} />
 
             <TerminalPanel title="ishant@portfolio:~$ cat about.json">
-              <pre className="text-[13px] leading-relaxed overflow-x-auto">
+              <pre tabIndex={0} aria-label="Code sample, scrollable" className="text-[13px] leading-relaxed overflow-x-auto">
                 <code>
                   <span style={{ color: "var(--t5)" }}>{"{"}</span>{"\n"}
                   {"  "}<span style={{ color: "#60a5fa" }}>"name"</span><span style={{ color: "var(--t5)" }}>: </span><span style={{ color: "#4ade80" }}>"Ishant Bhoyar"</span><span style={{ color: "var(--t5)" }}>,</span>{"\n"}

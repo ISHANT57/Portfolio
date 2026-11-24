@@ -49,7 +49,7 @@ function CircleProgress({ solved, total, color, label }: { solved: number; total
         </div>
       </div>
       <span className="text-xs font-mono text-foreground/50">{label}</span>
-      <span className="text-[10px] text-foreground/30">/ {total}</span>
+      <span className="text-[10px] text-foreground/60">/ {total}</span>
     </div>
   );
 }
@@ -59,10 +59,10 @@ function StatCard({ icon: Icon, label, value, color }: { icon: React.ElementType
     <div className="glass-card rounded-xl p-4 flex items-center gap-3">
       <div className="w-9 h-9 rounded-xl flex items-center justify-center shrink-0"
         style={{ background: `${color}14`, border: `1px solid ${color}28`, color }}>
-        <Icon className="w-4 h-4" />
+        <Icon aria-hidden="true" className="w-4 h-4" />
       </div>
       <div>
-        <p className="text-xs font-mono text-foreground/40">{label}</p>
+        <p className="text-xs font-mono text-foreground/60">{label}</p>
         <p className="font-bold text-base text-foreground/90">{value}</p>
       </div>
     </div>
@@ -158,7 +158,7 @@ export function LeetCodeStats() {
 
         {error && (
           <div className="glass-card rounded-2xl p-8 text-center">
-            <Code2 className="w-8 h-8 mx-auto mb-3 text-foreground/20" />
+            <Code2 className="w-8 h-8 mx-auto mb-3 text-foreground/60" />
             <p className="text-foreground/50 text-sm mb-4">{error}</p>
             <button
               onClick={fetchStats}
@@ -198,7 +198,7 @@ export function LeetCodeStats() {
                   </div>
                   <div className="text-center">
                     <p className="text-3xl font-extrabold text-gradient">{data.totalSolved}</p>
-                    <p className="text-xs font-mono text-foreground/40 mt-1">total problems solved</p>
+                    <p className="text-xs font-mono text-foreground/60 mt-1">total problems solved</p>
                   </div>
                 </>
               ) : null}

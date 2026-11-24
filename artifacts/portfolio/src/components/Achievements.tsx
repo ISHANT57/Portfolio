@@ -64,7 +64,7 @@ export function Achievements() {
                       style={{ background: "rgba(99,102,241,0.12)", color: "#a78bfa", border: "1px solid rgba(99,102,241,0.2)" }}>
                       GPA: 7.94
                     </span>
-                    <span className="text-xs text-foreground/40 font-mono">/ 10.0</span>
+                    <span className="text-xs text-foreground/60 font-mono">/ 10.0</span>
                   </div>
                 </motion.div>
               </div>
@@ -101,7 +101,7 @@ export function Achievements() {
                       <p className="text-sm text-foreground/55 leading-relaxed">
                         Awarded by the <span className="text-yellow-400 font-medium">Sitare Foundation</span> recognizing exceptional academic potential in computer science.
                       </p>
-                      <p className="text-xs font-mono text-foreground/35 mt-2">Aug 2024 – Present</p>
+                      <p className="text-xs font-mono text-foreground/60 mt-2">Aug 2024 – Present</p>
                     </div>
                   </div>
                 </motion.div>

@@ -176,7 +176,7 @@ export function Hero() {
                 className="flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors"
                 data-testid="link-github"
               >
-                <SiGithub className="w-4 h-4" />
+                <SiGithub aria-hidden="true" className="w-4 h-4" />
                 GitHub
               </a>
               <span className="w-1 h-1 rounded-full" style={{ background: "var(--t6)" }} />

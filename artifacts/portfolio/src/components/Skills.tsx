@@ -152,7 +152,7 @@ function SkillPill({ skill, isGrid = false }: { skill: Skill; isGrid?: boolean }
           }}
         >
           {Icon ? (
-            <Icon style={{ width: 20, height: 20, color: skill.color, filter: hovered ? `drop-shadow(0 0 5px ${skill.color}90)` : "none" }} />
+            <Icon aria-hidden="true" style={{ width: 20, height: 20, color: skill.color, filter: hovered ? `drop-shadow(0 0 5px ${skill.color}90)` : "none" }} />
           ) : (
             <span className="text-[11px] font-bold font-mono" style={{ color: skill.color }}>{skill.abbr}</span>
           )}
@@ -166,7 +166,7 @@ function SkillPill({ skill, isGrid = false }: { skill: Skill; isGrid?: boolean }
           >
             {skill.name}
           </p>
-          <p className="text-[10px] font-mono uppercase tracking-widest mt-0.5" style={{ color: "rgba(255,255,255,0.3)" }}>
+          <p className="text-[10px] font-mono uppercase tracking-widest mt-0.5" style={{ color: "rgba(255,255,255,0.62)" }}>
             {catLabel(skill.cat)}
           </p>
         </div>
